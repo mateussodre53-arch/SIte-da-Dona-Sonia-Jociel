@@ -1,23 +1,39 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
+:root{ /*nome=valor*/ /*cria uma variavel*/
+  --cor-pricipal: #3B929C;
+  --cor-secundario: #FFFFFF;
+  --cor-botao: #E78887;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family:'Oxygen'; /*define a fonte selecionada no google*/
 }
 
+#home{
+  scroll-margin-top: 110px; /*define o limite da margem (tela) na rolada*/
+}
+
+#bordados{
+  scroll-margin-top: 140px;
+}
+
 header {
-  background-color: #e7adcd;
+  background-color: var(--cor-pricipal);
   width: 100%;
-  height: 110px
+  height: 110px;
+  position: fixed; /*fixa o cabeçalho quando der a rolada*/
+  top: 0px;
 }
 
 nav {
   display: flex; /*coloca a lista ao lado da imagem*/
   justify-content: space-between;/*deixa a lista e a imagem um em cada lado*/
   align-items: center;
-  height: 110px;
+  height: 110 px;
   width: 95%;
   margin: auto;
 }
@@ -34,21 +50,25 @@ ul {
 
 a{
   text-decoration: none; /*pra tirar o sublinhado do "a"*/
-  color: #FFFFFF;
+  color: var(--cor-secundario);
   font-size: 25px; /*define o tamanho do texto*/
-  border: 2px solid #FFFFFF; /*cria uma borda*/
+  border: 2px solid var(--cor-secundario); /*cria uma borda*/
   padding: 10px;/*espaso dentro entre as letars e a broda*/
   border-radius: 0 20px;/*arredonda as beiras*/
 }
 
-a:hover{ /*para mudar a cor quando pasar o dedo no botao*/
-background-color: #FFFFFF;
-color: #3B929C;
+a:hover{ /*para mudar a cor quando passar o dedo no botao*/
+background-color: var(--cor-secundario);
+color: var(--cor-pricipal);
 }
 
 .icones{
   padding: 10px 50px;
   
+}
+
+main{
+  margin-top: 110px; 
 }
 
 #banner{
@@ -65,8 +85,8 @@ color: #3B929C;
 #reservas{
     width: 1400px;
     height: 144px;
-    border: 2px dashed #3B929C;
-    color: #3B929C;
+    border: 2px dashed var(--cor-pricipal) ;
+    color: var(--cor-pricipal);
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
@@ -81,12 +101,17 @@ color: #3B929C;
 
 #reservas__botao{
   padding: 20px 60px;
-  color:#FFFFFF;
+  color:var(--cor-secundario);
   font-size: 22px;
-  background-color: #3B929C;
+  background-color: var(--cor-pricipal);
   border:none;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+#reservas__botao:hover{
+  background-color: var(--cor-botao);
+  color: var(--cor-secundario);
 }
 
 #reservas__titulo{
@@ -101,7 +126,7 @@ color: #3B929C;
 }
 
 .sobre{
-  color: #3B929C;
+  color: var(--cor-pricipal);
   width: 500px;
 }
 
@@ -128,7 +153,7 @@ font-size: 50px;
 
  .catalogo-titulo{
     font-size: 50px;
-    color:#3B929C;
+    color:var(--cor-pricipal);
     margin-bottom: 50px;
  }
 
@@ -136,7 +161,7 @@ font-size: 50px;
     display: flex;
     width: 764px;
     height: 40px;
-    border: 3px solid #3B929C;
+    border: 3px solid var(--cor-pricipal);
     border-radius: 20px;
     padding: 5px;
     justify-content: center;
@@ -151,7 +176,7 @@ font-size: 50px;
  .busca__botao{
     font-size: 30px;
     border: none;
-    color: #3B929C;
+    color: var(--cor-pricipal);
     background: none;
  }
 
@@ -171,3 +196,4 @@ font-size: 50px;
     flex-wrap: wrap;
     gap: 50px;
  }
+
