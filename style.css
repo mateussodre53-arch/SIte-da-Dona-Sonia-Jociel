@@ -1,39 +1,46 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
-:root{ /*nome=valor*/ /*cria uma variavel*/
-  --cor-pricipal: #3B929C;
-  --cor-secundario: #FFFFFF;
+:root {
+  /*nome=valor*/
+  /*cria uma variavel*/
+  --cor-principla: #3B929C;
+  --cor-secundaria: #FFFFFF;
   --cor-botao: #E78887;
+  --largura-principal: 1600px;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family:'Oxygen'; /*define a fonte selecionada no google*/
+  font-family: 'Oxygen';
+  /*define a fonte selecionada no google*/
 }
 
-#home{
-  scroll-margin-top: 110px; /*define o limite da margem (tela) na rolada*/
+#home {
+  scroll-margin-top: 110px;
+  /*define o limite da margem (tela) na rolada*/
 }
 
-#bordados{
+#bordados {
   scroll-margin-top: 140px;
 }
 
 header {
-  background-color: var(--cor-pricipal);
+  background-color: var(--cor-principla);
   width: 100%;
   height: 110px;
-  position: fixed; /*fixa o cabeçalho quando der a rolada*/
+  position: fixed;
+  /*fixa o cabeçalho quando der a rolada*/
   top: 0px;
 }
 
 nav {
-  display: flex; /*coloca a lista ao lado da imagem*/
-  justify-content: space-between;/*deixa a lista e a imagem um em cada lado*/
+  display: flex;
+  /*coloca a lista ao lado da imagem*/
+  justify-content: space-between;
+  /*deixa a lista e a imagem um em cada lado*/
   align-items: center;
-  height: 110 px;
+  height: 110px;
   width: 95%;
   margin: auto;
 }
@@ -41,159 +48,186 @@ nav {
 
 
 ul {
-  display: flex; /*deixa os itens da lista uma ao lado da outra*/ 
-  gap: 50px;/*da espasamento entre os icones*/
-  list-style: none; /*tira a bolinha da lista*/
-  
-  
-}
-
-a{
-  text-decoration: none; /*pra tirar o sublinhado do "a"*/
-  color: var(--cor-secundario);
-  font-size: 25px; /*define o tamanho do texto*/
-  border: 2px solid var(--cor-secundario); /*cria uma borda*/
-  padding: 10px;/*espaso dentro entre as letars e a broda*/
-  border-radius: 0 20px;/*arredonda as beiras*/
-}
-
-a:hover{ /*para mudar a cor quando passar o dedo no botao*/
-background-color: var(--cor-secundario);
-color: var(--cor-pricipal);
-}
-
-.icones{
-  padding: 10px 50px;
-  
-}
-
-main{
-  margin-top: 110px; 
-}
-
-#banner{
-  width: 1400px;
-
-}
-
-#banner__image{
-  margin-top: 10px;
-  width: 1400px;
-  
-}
-
-#reservas{
-    width: 1400px;
-    height: 144px;
-    border: 2px dashed var(--cor-pricipal) ;
-    color: var(--cor-pricipal);
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.area-banner{
   display: flex;
-  flex-direction:column;
+  /*deixa os itens da lista uma ao lado da outra*/
+  gap: 50px;
+  /*da espasamento entre os icones*/
+  list-style: none;
+  /*tira a bolinha da lista*/
+
+
+}
+
+.icones {
+  text-decoration: none;
+  /*pra tirar o sublinhado do "a"*/
+  color: var(--cor-secundaria);
+  font-size: 25px;
+  /*define o tamanho do texto*/
+  border: 2px solid var(--cor-secundaria);
+  /*cria uma borda*/
+  padding: 10px;
+  /*espaso dentro entre as letars e a broda*/
+  border-radius: 0 20px;
+  /*arredonda as beiras*/
+}
+
+.icones:hover {
+  /*para mudar a cor quando passar o dedo no botao*/
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principla);
+  border: none;
+}
+
+a:focus {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principla);
+}
+
+.icones {
+  padding: 10px 50px;
+
+}
+
+main {
+  margin-top: 110px;
+}
+
+#banner {
+  width: var(--largura-principal);
+
+}
+
+#banner__image {
+  margin-top: 10px;
+  width: var(--largura-principal);
+
+}
+
+#reservas {
+  width: var(--largura-principal);
+  height: 144px;
+  border: 2px dashed var(--cor-principla);
+  color: var(--cor-principla);
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.area-banner {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 
-#reservas__botao{
+#reservas__botao {
   padding: 20px 60px;
-  color:var(--cor-secundario);
+  color: var(--cor-secundaria);
   font-size: 22px;
-  background-color: var(--cor-pricipal);
-  border:none;
+  background-color: var(--cor-principla);
+  border: none;
   border-radius: 15px;
   margin-top: 15px;
 }
 
-#reservas__botao:hover{
+#reservas__botao:hover {
   background-color: var(--cor-botao);
-  color: var(--cor-secundario);
+  color: var(--cor-secundaria);
 }
 
-#reservas__titulo{
-  margin-top: 15x;
+#reservas__titulo {
+  margin-top: 15px;
 }
 
-.area-sobre{ 
-    display: flex;
-    width: 1400px;
-    margin:20px auto;
-    justify-content: space-around;
+.area-sobre {
+  display: flex;
+  width: var(--largura-principal);
+  margin: 20px auto;
+  justify-content: space-around;
 }
 
-.sobre{
-  color: var(--cor-pricipal);
+.sobre {
+  color: var(--cor-principla);
   width: 500px;
 }
 
-.sobre__foto{
+.sobre__foto {
   width: 500px;
 }
 
-.sobre__titulo{
-margin-top: 30px;
-font-size: 50px;
+.sobre__titulo {
+  margin-top: 30px;
+  font-size: 50px;
 }
 
-.sobre__texto{
+.sobre__texto {
   margin-top: 30px;
   font-size: 30px;
 }
 
- .area-busca{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
+.area-busca {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
- .catalogo-titulo{
-    font-size: 50px;
-    color:var(--cor-pricipal);
-    margin-bottom: 50px;
- }
+.catalogo-titulo {
+  font-size: 50px;
+  color: var(--cor-principla);
+  margin-bottom: 50px;
+}
 
- .busca{
-    display: flex;
-    width: 764px;
-    height: 40px;
-    border: 3px solid var(--cor-pricipal);
-    border-radius: 20px;
-    padding: 5px;
-    justify-content: center;
- }
- .busca__campo{
-    flex: 1 ;
-    border: none;
-    outline: none;
-    font-size: 25px;
- }
+.busca {
+  display: flex;
+  width: 764px;
+  height: 40px;
+  border: 3px solid var(--cor-principla);
+  border-radius: 20px;
+  padding: 5px;
+  justify-content: center;
+}
 
- .busca__botao{
-    font-size: 30px;
-    border: none;
-    color: var(--cor-pricipal);
-    background: none;
- }
+.busca__campo {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 25px;
+}
 
- .bordados > a > img{
-    width: 400px;
-    border-radius: 20px;
- }
+.busca__botao {
+  font-size: 30px;
+  border: none;
+  color: var(--cor-principla);
+  background: none;
+}
 
- .bordados{
-    text-align: center;
- }
+.bordados>a>img {
+  width: 400px;
+  border-radius: 20px;
+}
 
- .catalogo{
-    margin:100px  auto;
-    width: 1400px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
- }
+.bordados {
+  text-align: center;
+}
 
+.catalogo {
+  margin: 100px auto;
+  width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+h3{
+    color: var(--cor-principal);
+ }
+ 
+ hr{
+    border:none;
+    height: 2px;
+    background-color: var(--cor-principal);
+    width: var(--largura-principal);
+    margin: auto;
+ }
