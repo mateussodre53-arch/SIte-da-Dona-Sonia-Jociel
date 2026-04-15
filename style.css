@@ -3,10 +3,11 @@
 :root {
   /*nome=valor*/
   /*cria uma variavel*/
-  --cor-principla: #3B929C;
+  --cor-principal: #a4a9da;
   --cor-secundaria: #FFFFFF;
-  --cor-botao: #E78887;
+  --cor-botao: #8E4162;
   --largura-principal: 1600px;
+  --largura-celular: 430px;
 }
 
 * {
@@ -26,7 +27,7 @@
 }
 
 header {
-  background-color: var(--cor-principla);
+  background-color: var(--cor-principal);
   width: 100%;
   height: 110px;
   position: fixed;
@@ -34,7 +35,7 @@ header {
   top: 0px;
 }
 
-nav {
+.area-navegacao {
   display: flex;
   /*coloca a lista ao lado da imagem*/
   justify-content: space-between;
@@ -44,8 +45,6 @@ nav {
   width: 95%;
   margin: auto;
 }
-
-
 
 ul {
   display: flex;
@@ -70,23 +69,19 @@ ul {
   /*espaso dentro entre as letars e a broda*/
   border-radius: 0 20px;
   /*arredonda as beiras*/
+  padding: 10px 50px;
 }
 
 .icones:hover {
   /*para mudar a cor quando passar o dedo no botao*/
   background-color: var(--cor-secundaria);
-  color: var(--cor-principla);
+  color: var(--cor-principal);
   border: none;
 }
 
 a:focus {
   background-color: var(--cor-secundaria);
-  color: var(--cor-principla);
-}
-
-.icones {
-  padding: 10px 50px;
-
+  color: var(--cor-principal);
 }
 
 main {
@@ -107,8 +102,8 @@ main {
 #reservas {
   width: var(--largura-principal);
   height: 144px;
-  border: 2px dashed var(--cor-principla);
-  color: var(--cor-principla);
+  border: 2px dashed var(--cor-principal);
+  color: var(--cor-principal);
   text-align: center;
   font-size: 20px;
   margin-top: 10px;
@@ -125,7 +120,7 @@ main {
   padding: 20px 60px;
   color: var(--cor-secundaria);
   font-size: 22px;
-  background-color: var(--cor-principla);
+  background-color: var(--cor-principal);
   border: none;
   border-radius: 15px;
   margin-top: 15px;
@@ -148,7 +143,7 @@ main {
 }
 
 .sobre {
-  color: var(--cor-principla);
+  color: var(--cor-principal);
   width: 500px;
 }
 
@@ -175,7 +170,7 @@ main {
 
 .catalogo-titulo {
   font-size: 50px;
-  color: var(--cor-principla);
+  color: var(--cor-principal);
   margin-bottom: 50px;
 }
 
@@ -183,7 +178,7 @@ main {
   display: flex;
   width: 764px;
   height: 40px;
-  border: 3px solid var(--cor-principla);
+  border: 3px solid var(--cor-principal);
   border-radius: 20px;
   padding: 5px;
   justify-content: center;
@@ -199,7 +194,7 @@ main {
 .busca__botao {
   font-size: 30px;
   border: none;
-  color: var(--cor-principla);
+  color: var(--cor-principal);
   background: none;
 }
 
@@ -218,16 +213,127 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+  justify-content: center;
 }
 
-h3{
-    color: var(--cor-principal);
- }
- 
- hr{
-    border:none;
-    height: 2px;
-    background-color: var(--cor-principal);
-    width: var(--largura-principal);
-    margin: auto;
- }
+h3 {
+  color: var(--cor-principal);
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--cor-principal);
+  width: var(--largura-principal);
+  margin: auto;
+}
+
+@media(max-width: 430px) {
+
+  header {
+    width: 430px;
+    height: 90px;
+    position: fixed;
+    top: 0;
+  }
+
+  .area-navegacao {
+    width: var(--largura-celular);
+    height: 90px;
+    justify-content: center;
+
+  }
+
+  .logo {
+    display: none;
+  }
+
+  ul {
+    gap: 15px;
+    justify-content: space-around;
+  }
+
+  .icones {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+  }
+
+  .icones:hover,
+  .icones:focus {
+    background: none;
+    color: none;
+  }
+
+  #banner {
+    width: var(--largura-celular);
+  }
+
+  #banner__image {
+    width: var(--largura-celular);
+  }
+
+  #reservas {
+    width: 390px;
+    border-width: 2px;
+  }
+
+  #reservas__titulo {
+    font-size: 22px;
+  }
+
+  #reservas__botao {
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
+  .area-sobre {
+    flex-direction: column;
+    width: var(--largura-celular);
+
+  }
+
+  .sobre {
+    width: var(--largura-celular);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre__titulo {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .sobre__texto {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .sobre__foto {
+    width: 400px;
+    border-radius: 100px;
+    padding: 10px;
+  }
+
+hr{
+  width: 400px;
+}
+
+.area-busca{
+  width: var(--largura-celular);
+}
+
+
+.busca{
+  width: 350px;
+}
+
+.catalogo-titulo{
+  font-size: 35px;
+}
+
+.catalogo {
+  width: var(--largura-celular);
+}
