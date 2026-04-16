@@ -6,9 +6,11 @@
   --cor-principal: #a4a9da;
   --cor-secundaria: #FFFFFF;
   --cor-botao: #8E4162;
-  --largura-principal: 1600px;
-  --largura-celular: 430px;
+  --largura-principal: 84vw;
+  --largura-celular: 100vw;
 }
+  /*--largura-principal: 1600px;
+  --largura-celular: 430px;*/
 
 * {
   margin: 0;
@@ -212,6 +214,7 @@ main {
   width: 1400px;
   display: flex;
   flex-wrap: wrap;
+  /* faz quebrar uma linnha quando nao couber na tela*/
   gap: 50px;
   justify-content: center;
 }
@@ -231,17 +234,16 @@ hr {
 @media(max-width: 430px) {
 
   header {
-    width: 430px;
-    height: 90px;
+    width: var(--largura-celular);
+    height: 10vh;
     position: fixed;
     top: 0;
   }
 
   .area-navegacao {
     width: var(--largura-celular);
-    height: 90px;
+    height: 10vh;
     justify-content: center;
-
   }
 
   .logo {
@@ -291,7 +293,6 @@ hr {
   .area-sobre {
     flex-direction: column;
     width: var(--largura-celular);
-
   }
 
   .sobre {
@@ -317,23 +318,38 @@ hr {
     padding: 10px;
   }
 
-hr{
-  width: 400px;
-}
+  hr {
+    width: 400px;
+  }
 
-.area-busca{
-  width: var(--largura-celular);
-}
+  .area-busca {
+    width: var(--largura-celular);
+  }
 
 
-.busca{
-  width: 350px;
-}
+  .busca {
+    width: 350px;
+  }
 
-.catalogo-titulo{
-  font-size: 35px;
-}
+  .catalogo-titulo {
+    font-size: 35px;
+  }
 
-.catalogo {
-  width: var(--largura-celular);
+  .catalogo {
+    width: var(--largura-celular);
+    display: flex;
+    gap: 10px; /*da um espaço entre um item e outro de forma lateral ou na direçao q o display flex está*/
+    height: 90vh; /*viwe sei la oquer(VH) uma medida faz os intens ocupar uma % da tela*/
+  }
+
+  .bordados>a>img {/* Seleciona imagens (<img>) que estão dentro de links (<a>),
+   que são filhos diretos de um elemento com classe .bordados */
+    width: 200px;
+  }
+
+
+
+
+
+
 }
