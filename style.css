@@ -81,7 +81,7 @@ ul {
   border: none;
 }
 
-a:focus {
+,.icones:focus {
   background-color: var(--cor-secundaria);
   color: var(--cor-principal);
 }
@@ -277,91 +277,105 @@ hr {
     padding: 20px;
   }
 
-  .icones:hover,
-  .icones:focus {
-    background: none;
-    color: none;
+  .icones:hover {
+    background-color: initial;
+    border: initial;
   }
 
-  #banner {
-    width: var(--largura-celular);
+  .icones :focus{
+    border-radius: 0;
+    border:initial;
   }
 
-  #banner__image {
-    width: var(--largura-celular);
-  }
+    .icones:active{
+        border: initial;
+    }
 
-  #reservas {
-    width: 390px;
-    border-width: 2px;
-  }
+    #banner{
+        width: var(--largura-celular);
+    }
 
-  #reservas__titulo {
-    font-size: 22px;
-  }
+    #banner__image{
+        width: var(--largura-celular);
+    }
 
-  #reservas__botao {
-    padding: 10px 15px;
-    font-size: 18px;
-    border-radius: 5px;
-  }
+    #reservas{
+        width: 390px;
+        border-width: 2px;
+    }
 
-  .area-sobre {
-    flex-direction: column;
-    width: var(--largura-celular);
-  }
+    #reservas__titulo{
+        font-size: 22px;
+    }
 
-  .sobre {
-    width: var(--largura-celular);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    #reservas__botao{
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
 
-  .sobre__titulo {
-    font-size: 35px;
-    text-align: center;
-  }
+    .area-sobre{
+        flex-direction: column;
+        width: var(--largura-celular);
+    }
+    .sobre{
+        width: var(--largura-celular);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sobre__titulo{
+        font-size: 35px;
+    }
 
-  .sobre__texto {
-    font-size: 20px;
-    padding: 20px;
-  }
+    .sobre__texto{
+        font-size: 20px;
+        padding: 20px;
+    }
+    .sobre__foto{
+        width: 400px;
+        border-radius: 100px;
+    }
+    hr{
+        width: 400px;
+    }
+    .area-busca{
+        width: var(--largura-celular);
+    }
 
-  .sobre__foto {
-    width: 400px;
-    border-radius: 100px;
-    padding: 10px;
-  }
+    .busca{
+        width: 350px;
+    }
 
-  hr {
-    width: 400px;
-  }
+    .catalogo-titulo{
+        font-size: 35px;
+    }
 
-  .area-busca {
-    width: var(--largura-celular);
-  }
+    .catalogo{
+        width: var(--largura-celular);
+        align-content: space-evenly;
+        height: 65vh;
+    }
+ 
+  
+    .bordados >a > img {
+        width: 200px;
+    }
 
 
-  .busca {
-    width: 350px;
-  }
+    main{ 
+        margin-top: 80px;
+    }
 
-  .catalogo-titulo {
-    font-size: 35px;
-  }
+   .rodape{
+    position: relative;
+       top: 60vh;
+    }
 
-  .catalogo {
-    width: var(--largura-celular);
-    display: flex;
-    gap: 10px; /*da um espaço entre um item e outro de forma lateral ou na direçao q o display flex está*/
-    height: 90vh; /*viwe sei la oquer(VH) uma medida faz os intens ocupar uma % da tela*/
-  }
+    .rodape p{
+        font-size: 1rem
+    }
 
-  .bordados>a>img {/* Seleciona imagens (<img>) que estão dentro de links (<a>),
-   que são filhos diretos de um elemento com classe .bordados */
-    width: 200px;
-  }
 
 
 

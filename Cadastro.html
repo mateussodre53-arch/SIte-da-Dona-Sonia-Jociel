@@ -1,129 +1,136 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Cadastro.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cadastro</title>
 
+    <link rel="stylesheet" href="Cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
 <body>
-<header>
-        <nav class="area-navegacao">
-            <img class="logo" src="/Imagens/logo dos bosrdados.png" alt="Logo do site" width="150px" height="110px">
-            <ul>
-                <li><a class="icones" href="index.html"><i class="fa-solid fa-house-chimney"></i></a></li>
-                <li><a class="icones" href="#bordados"><i class="fa-solid fa-scissors"></i></a></li>
-                <li><a class="icones" href="#"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
-                <li><a class="icones" href="Cadastro.html"><i class="fa-solid fa-user-gear"></i></a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="area-cadastro">
+<header>
+    <nav class="area-navegacao">
+        <img class="logo" src="/Imagens/logo dos bosrdados.png" alt="Logo do site" width="150" height="110">
+        <ul>
+            <li><a class="icones" href="index.html"><i class="fa-solid fa-house-chimney"></i></a></li>
+            <li><a class="icones" href="#"><i class="fa-solid fa-scissors"></i></a></li>
+            <li><a class="icones" href="#"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+            <li><a class="icones" href="Cadastro.html"><i class="fa-solid fa-user-gear"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- MAIN separado da caixa -->
+<main>
+    <section class="area-cadastro">
+
         <section class="area-titulo">
             <h1>Cadastro de usuário</h1>
         </section>
 
         <section class="area-formulario">
-            <form action="#" class="form-cadastro ">
+            <form class="form-cadastro">
 
                 <div class="area-nome formatacao">
-                    <div class="primeiro-nome titulo-campo">
-                        <label for="nome">nome</label> <!--labbel nome encima do botao--> <!-- for da pra clicar no nome ou na caixa-->
-                        <input type="text" id="nome" placeholder="Digite seu nome" required> <!--campo para digitar-->
+                    <div class="titulo-campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
                     </div>
 
-                    <div class="ultimo-nome titulo-campo">
-                        <label for="sobrenome">sobrenome</label>
-                        <input type="text" id="sobrenome" placeholder="digite seu sobrenome">
+                    <div class="titulo-campo">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
                     </div>
                 </div>
 
-                <div class="area-acesso formatacao"> <!--para criar direto usa div . ou # + nome da clase ou id-->
-                    <div class="email titulo-campo">
+                <div class="area-acesso formatacao">
+                    <div class="titulo-campo">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" placeholder="Digite seu E-mail" required>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
                     </div>
 
-
-                    <div class="senha titulo-campo">
+                    <div class="titulo-campo">
                         <label for="senha">Senha</label>
-                        <input type="password" id="senha" placeholder="••••••••••••" required>
+                        <input type="password" id="senha" placeholder="••••••••" required>
                     </div>
                 </div>
 
                 <div class="area-contato formatacao">
                     <div class="ddd titulo-campo">
-                        <label for="ddd">ddd</label>
-                        <input type="number" max="99" id="ddd" placeholder="ddd" required>
+                        <label for="ddd">DDD</label>
+                        <input type="number" id="ddd" placeholder="DDD" required>
                     </div>
-                    <div class="telefone titulo-campo">
-                        <label for="telefone">telefone</label>
+
+                    <div class="titulo-campo">
+                        <label for="telefone">Telefone</label>
                         <input type="text" id="telefone" placeholder="Digite seu telefone" required>
                     </div>
                 </div>
 
                 <div class="area-endereco formatacao">
-                    <div class="endereco-numero formatacao">
-                        <div class="endereco titulo-campo">
-                            <label for="endereco">endereço</label>
-                            <input type="text" id="endereco" placeholder="digite seu endereço">
-                        </div>
-                        <div class="numero titulo-campo">
-                            <label for="numero">Numero</label>
-                            <input type="number" id="numero" placeholder="000">
-                        </div>
-                    </div>
-                    <div class="cidade-cep formatacao">
-                        <div class="cidade titulo-campo">
-                            <label for="cidade">Cidade</label>
-                            <input type="text" id="cidade" placeholder="cidade">
+                    <div class="formatacao">
+                        <div class="titulo-campo">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco">
                         </div>
 
-                        <div class="cep  titulo-campo">
-                            <label for="CEP">CEP</label>
-                            <input type="number" id="CEP" placeholder="00000-000">
+                        <div class="titulo-campo numero">
+                            <label for="numero">Número</label>
+                            <input type="number" id="numero">
+                        </div>
+                    </div>
+
+                    <div class="formatacao">
+                        <div class="titulo-campo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade">
+                        </div>
+
+                        <div class="titulo-campo cep">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep">
                         </div>
                     </div>
                 </div>
 
                 <div class="area-dados formatacao">
-                    <div class="data-nascimento titulo-campo">
-                        <label for="data-nascimento">Data de nascimento</label>
-                        <input type="date" id="data-nascimento" required>
+                    <div class="titulo-campo">
+                        <label for="data">Data de nascimento</label>
+                        <input type="date" id="data" required>
                     </div>
-                    <div class="genero titulo-campo">
-                        <label for="genero">Genero</label>
+
+                    <div class="titulo-campo">
+                        <label for="genero">Gênero</label>
                         <select id="genero" required>
-                            <option value="#" disabled selected>Selecione seu genero</option>
-                            <option value="#">Feminino</option>
-                            <option value="#">Masculino</option>
-                            <option value="#">Outro</option>
-                            <option value="#">Batman</option>
-                            <option value="#">Prefiro nao responder</option>
+                            <option disabled selected>Selecione</option>
+                            <option>Feminino</option>
+                            <option>Masculino</option>
+                            <option>Outro</option>
                         </select>
                     </div>
                 </div>
 
+                <div class="area-botao formatacao"> <button id="botao-cadastrar" type="submit">cadastrar</button> <a href="login.html" class="link-login">Já possui uma conta? Acesse agora !</a> </div>
 
-                <div class="area-botao formatacao">
-                    <button type="submit">cadastrar</button>
-                    <a href="login.html" class="link-login">Já possui uma conta? Acesse agora !</a>
-                </div>
             </form>
         </section>
 
+    </section>
+</main>
 
-
-
-    </main>
+<footer class="rodape">
+    <nav class="nav-rodape">
+        <p>
+            A Tia Sônia agradece sua visita. Ficou alguma dúvida?
+            <a href="https://w.app/bordados-sonia" target="_blank">Entre em contato</a>
+        </p>
+        <p>Todos os direitos reservados</p>
+    </nav>
+</footer>
 
 </body>
-
 </html>

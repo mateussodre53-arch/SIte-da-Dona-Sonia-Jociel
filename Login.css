@@ -2,21 +2,18 @@
 @import url(Cadastro.css);
 /*o @ importa as bugigangas da outra pagina*/
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 
 .area-cadastro {
-     width: 60vw;
-    margin-top: 20vh;
-    margin-bottom: 20vh; 
+     width: 40vw;
+   
 }
 
+.form-cadastro{
+    width: 30vw;
+}
 
 .area-acesso {
-    display: flex;
+
     flex-direction: column;
 }
 
